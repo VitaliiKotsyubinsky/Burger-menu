@@ -1,0 +1,56 @@
+header {
+    background-color: black;
+    color: blanchedalmond;
+    padding: 20px;
+    height: 50px;
+
+}
+
+a:link, a:visited {
+    color: blanchedalmond;
+}
+
+button {
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+nav>ul {
+    display: flex;
+    gap: 30px;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+:checked+nav {
+    /* display: block; */
+    transform: translate(-20px, 0);
+    height: 300px;
+}
+
+@media (max-width:800px) {
+    nav {
+        /* display: none; */
+        transform: translate(-20px, -500%);
+        width: 100%;
+        transition: transform 0.5s;
+        padding: 20px;
+        background-color: black;
+        height: 0;
+        overflow: hidden;
+    }
+
+    button {
+        display: inline-block;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
